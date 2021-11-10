@@ -23,8 +23,10 @@ masses.t6 = [42, 41.7, 41.5, 41.3, 41, 40.8, 40.6, 40.4, 40.3, 40.2, 40.1, 40];
 
 for i = 1:length(trials)
     moisture_content.(trials{i}) = (masses.(trials{i}) - dry_mass) ./ dry_mass;
+    diff.(trials{i}) = center_difference(moisture_content.(trials{i}), times.(trials{i}));
     for j = 2:1:length(masses.(trials{i}))
-        drying_rate.(trials{i})(j) = (areas(i)/dry_mass) * (moisture_content.(trials{i})(j) - moisture_content.(trials{i})(j-1));% / (times.(trials{i})(j) - times.(trials{i})(j-1));
+%         drying_rate.(trials{i})(j) = (dry_mass/areas(i)) * (moisture_content.(trials{i})(j) - moisture_content.(trials{i})(j-1));% / (times.(trials{i})(j) - times.(trials{i})(j-1));
+        drying_rate.(trials{i})(j) = (dry_mass/areas(i)) * diff.(trials{i})(j);
     end
 end
 
@@ -34,7 +36,7 @@ hold on
 for i = 1:length(trials)
     y = moisture_content.(trials{i});
     x = times.(trials{i});
-    plot(x, y, '.')
+    plot(x, y, '.-')
 end
 xlabel('Time [s]')
 ylabel('Moisture Content')
@@ -47,7 +49,7 @@ hold on
 for i = 1:length(trials)
     y = drying_rate.(trials{i});
     x = times.(trials{i});
-    plot(x, y, '.')
+    plot(x, y, '.-')
 end
 xlabel('Time [s]')
 ylabel('Drying Rate [g/cm^2\cdots]')
@@ -58,11 +60,20 @@ title('Drying Rate vs. Time')
 figure(3)
 hold on
 for i = 1:length(trials)
-    y = flip(drying_rate.(trials{i}), 2);
+    y = flip(abs(drying_rate.(trials{i})), 2);
     x = flip(moisture_content.(trials{i}), 2);
-    plot(x, y, '.')
+    plot(x, y, '.-')
 end
 xlabel('Moisture Content')
 ylabel('Drying Rate [g/cm^2\cdots]')
 legend('Trial 1', 'Trial 2', 'Trial 3', 'Trial 4', 'Trial 5', 'Trial 6')
 title('Drying Rate vs. Moisture Content')
+
+function d = center_difference(y, x)
+    d = zeros(size(y));
+    for i = 2:1:length(y)-1
+        d(i) = 0.5 * (y(i+1) - y(i-1)) / (x(i+1) - x(i-1));
+    end
+    d(1) = (y(2) - y(1)) / (x(2) - x(1));
+    d(end) = (y(end) - y(end-1)) / (x(end) - x(end-1));
+end
