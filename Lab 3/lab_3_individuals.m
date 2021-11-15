@@ -32,29 +32,29 @@ end
 
 i = 6;
 
-figure(1)
-y = moisture_content.(trials{i});
-x = times.(trials{i});
-plot(x, y, 'bo-')
-xlabel('Time [s]')
-ylabel('Moisture Content')
-title('Moisture Content vs. Time')
+% figure(1)
+% y = moisture_content.(trials{i});
+% x = times.(trials{i});
+% plot(x, y, 'bo')
+% xlabel('Time [s]')
+% ylabel('Moisture Content')
+% title('Moisture Content vs. Time')
 
 figure(2)
 y = abs(drying_rate.(trials{i}));
 x = times.(trials{i});
-plot(x, y, 'bo-')
+plot(x, y, 'bo')
 xlabel('Time [s]')
 ylabel('Drying Rate [g/cm^2\cdots]')
 title('Drying Rate vs. Time')
 
-figure(3)
-y = flip(abs(drying_rate.(trials{i})), 2);
-x = flip(moisture_content.(trials{i}), 2);
-plot(x, y, 'bo-')
-xlabel('Moisture Content')
-ylabel('Drying Rate [g/cm^2\cdots]')
-title('Drying Rate vs. Moisture Content')
+% figure(3)
+% y = flip(abs(drying_rate.(trials{i})), 2);
+% x = flip(moisture_content.(trials{i}), 2);
+% plot(x, y, 'bo')
+% xlabel('Moisture Content')
+% ylabel('Drying Rate [g/cm^2\cdots]')
+% title('Drying Rate vs. Moisture Content')
 
 function d = center_difference(y, x)
     d = zeros(size(y));
