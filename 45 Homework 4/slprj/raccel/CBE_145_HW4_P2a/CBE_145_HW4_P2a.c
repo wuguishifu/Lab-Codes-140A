@@ -54,7 +54,7 @@ externalInputIsInDatasetFormat ) ; if ( externalInputIsInDatasetFormat ) { }
 srcInfo ; sdiLabelU loggedName = sdiGetLabelFromChars ( "" ) ; sdiLabelU
 origSigName = sdiGetLabelFromChars ( "" ) ; sdiLabelU propName =
 sdiGetLabelFromChars ( "" ) ; sdiLabelU blockPath = sdiGetLabelFromChars (
-"CBE_145_HW4_P2a/A = 1 kW, f = 5 s^-1" ) ; sdiLabelU blockSID =
+"CBE_145_HW4_P2a/A = 1 kW, f = 5 sec^-1" ) ; sdiLabelU blockSID =
 sdiGetLabelFromChars ( "" ) ; sdiLabelU subPath = sdiGetLabelFromChars ( "" )
 ; sdiDims sigDims ; sdiLabelU sigName = sdiGetLabelFromChars ( "" ) ;
 sdiAsyncRepoDataTypeHandle hDT = sdiAsyncRepoGetBuiltInDataTypeHandle (
@@ -64,15 +64,15 @@ sdiSampleTimeContinuity stCont = SAMPLE_TIME_CONTINUOUS ; int_T sigDimsArray
 srcInfo . numBlockPathElems = 1 ; srcInfo . fullBlockPath = ( sdiFullBlkPathU
 ) & blockPath ; srcInfo . SID = ( sdiSignalIDU ) & blockSID ; srcInfo .
 subPath = subPath ; srcInfo . portIndex = 0 + 1 ; srcInfo . signalName =
-sigName ; srcInfo . sigSourceUUID = 0 ; rtDW . ovxpqunp15 . AQHandles =
+sigName ; srcInfo . sigSourceUUID = 0 ; rtDW . eifc5ijtmv . AQHandles =
 sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , rt_dataMapInfo . mmi .
-InstanceMap . fullPath , "5706ed69-e094-4cea-8eda-0e2b744016c9" ,
+InstanceMap . fullPath , "2fa68ed1-0b11-4f46-87a5-c2824e4e7eaa" ,
 sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "" ) ; if ( rtDW
-. ovxpqunp15 . AQHandles ) { sdiSetSignalSampleTimeString ( rtDW . ovxpqunp15
+. eifc5ijtmv . AQHandles ) { sdiSetSignalSampleTimeString ( rtDW . eifc5ijtmv
 . AQHandles , "Continuous" , 0.0 , ssGetTFinal ( rtS ) ) ; sdiSetRunStartTime
-( rtDW . ovxpqunp15 . AQHandles , ssGetTaskTime ( rtS , 1 ) ) ;
-sdiAsyncRepoSetSignalExportSettings ( rtDW . ovxpqunp15 . AQHandles , 1 , 0 )
-; sdiAsyncRepoSetSignalExportName ( rtDW . ovxpqunp15 . AQHandles ,
+( rtDW . eifc5ijtmv . AQHandles , ssGetTaskTime ( rtS , 1 ) ) ;
+sdiAsyncRepoSetSignalExportSettings ( rtDW . eifc5ijtmv . AQHandles , 1 , 0 )
+; sdiAsyncRepoSetSignalExportName ( rtDW . eifc5ijtmv . AQHandles ,
 loggedName , origSigName , propName ) ; } sdiFreeLabel ( sigName ) ;
 sdiFreeLabel ( loggedName ) ; sdiFreeLabel ( origSigName ) ; sdiFreeLabel (
 propName ) ; sdiFreeLabel ( blockPath ) ; sdiFreeLabel ( blockSID ) ;
@@ -93,7 +93,7 @@ srcInfo . numBlockPathElems = 1 ; srcInfo . fullBlockPath = ( sdiFullBlkPathU
 subPath = subPath ; srcInfo . portIndex = 0 + 1 ; srcInfo . signalName =
 sigName ; srcInfo . sigSourceUUID = 0 ; rtDW . lornky1dlc . AQHandles =
 sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , rt_dataMapInfo . mmi .
-InstanceMap . fullPath , "899592aa-8686-43ef-bc37-abd841e7f37b" ,
+InstanceMap . fullPath , "86f7c062-bcfe-4e03-a33d-cb2bee63b110" ,
 sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "" ) ; if ( rtDW
 . lornky1dlc . AQHandles ) { sdiSetSignalSampleTimeString ( rtDW . lornky1dlc
 . AQHandles , "Continuous" , 0.0 , ssGetTFinal ( rtS ) ) ; sdiSetRunStartTime
@@ -120,7 +120,7 @@ srcInfo . numBlockPathElems = 1 ; srcInfo . fullBlockPath = ( sdiFullBlkPathU
 subPath = subPath ; srcInfo . portIndex = 0 + 1 ; srcInfo . signalName =
 sigName ; srcInfo . sigSourceUUID = 0 ; rtDW . lzd3oqczul . AQHandles =
 sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , rt_dataMapInfo . mmi .
-InstanceMap . fullPath , "d4ef429e-6fee-4a0b-be7a-4e96e4e87aee" ,
+InstanceMap . fullPath , "e06215ac-d87c-49e6-bd92-f46e13eea0a5" ,
 sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "" ) ; if ( rtDW
 . lzd3oqczul . AQHandles ) { sdiSetSignalSampleTimeString ( rtDW . lzd3oqczul
 . AQHandles , "Continuous" , 0.0 , ssGetTFinal ( rtS ) ) ; sdiSetRunStartTime
@@ -147,7 +147,7 @@ srcInfo . numBlockPathElems = 1 ; srcInfo . fullBlockPath = ( sdiFullBlkPathU
 subPath = subPath ; srcInfo . portIndex = 0 + 1 ; srcInfo . signalName =
 sigName ; srcInfo . sigSourceUUID = 0 ; rtDW . fdree3snwc . AQHandles =
 sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , rt_dataMapInfo . mmi .
-InstanceMap . fullPath , "14bdc3ac-bdde-41aa-b8ed-4431e8c8a6a9" ,
+InstanceMap . fullPath , "3094524a-462f-4523-ab1c-543313943b71" ,
 sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "" ) ; if ( rtDW
 . fdree3snwc . AQHandles ) { sdiSetSignalSampleTimeString ( rtDW . fdree3snwc
 . AQHandles , "Continuous" , 0.0 , ssGetTFinal ( rtS ) ) ; sdiSetRunStartTime
@@ -162,12 +162,12 @@ sdiFreeLabel ( subPath ) ; } } if ( ! isStreamoutAlreadyRegistered ) { } } }
 0.0 ; rtB . fn0unh2ha3 += rtP . TFwhentau04min_C * rtX . folfyo5vrc ; rtB .
 i3f0e0wt1y = 0.0 ; rtB . i3f0e0wt1y += rtP . TFwhentau1min_C * rtX .
 c0xqkfbiom ; rtB . no4iv1d1om = 0.0 ; rtB . no4iv1d1om += rtP .
-TFwhentau3min_C * rtX . i0so0rvfsc ; rtB . lsz3uen22l = muDoubleScalarSin (
-rtP . A1kWf5s1_Freq * ssGetTaskTime ( rtS , 0 ) + rtP . A1kWf5s1_Phase ) *
-rtP . A1kWf5s1_Amp + rtP . A1kWf5s1_Bias ; if ( ssIsSampleHit ( rtS , 1 , 0 )
-) { { if ( rtDW . ovxpqunp15 . AQHandles && ssGetLogOutput ( rtS ) ) {
-sdiWriteSignal ( rtDW . ovxpqunp15 . AQHandles , ssGetTaskTime ( rtS , 1 ) ,
-( char * ) & rtB . lsz3uen22l + 0 ) ; } } { if ( rtDW . lornky1dlc .
+TFwhentau3min_C * rtX . i0so0rvfsc ; rtB . dgrpt01040 = muDoubleScalarSin (
+rtP . A1kWf5sec1_Freq * ssGetTaskTime ( rtS , 0 ) + rtP . A1kWf5sec1_Phase )
+* rtP . A1kWf5sec1_Amp + rtP . A1kWf5sec1_Bias ; if ( ssIsSampleHit ( rtS , 1
+, 0 ) ) { { if ( rtDW . eifc5ijtmv . AQHandles && ssGetLogOutput ( rtS ) ) {
+sdiWriteSignal ( rtDW . eifc5ijtmv . AQHandles , ssGetTaskTime ( rtS , 1 ) ,
+( char * ) & rtB . dgrpt01040 + 0 ) ; } } { if ( rtDW . lornky1dlc .
 AQHandles && ssGetLogOutput ( rtS ) ) { sdiWriteSignal ( rtDW . lornky1dlc .
 AQHandles , ssGetTaskTime ( rtS , 1 ) , ( char * ) & rtB . fn0unh2ha3 + 0 ) ;
 } } { if ( rtDW . lzd3oqczul . AQHandles && ssGetLogOutput ( rtS ) ) {
@@ -179,13 +179,13 @@ AQHandles , ssGetTaskTime ( rtS , 1 ) , ( char * ) & rtB . no4iv1d1om + 0 ) ;
 UNUSED_PARAMETER ( tid ) ; } void MdlDerivatives ( void ) { XDot * _rtXdot ;
 _rtXdot = ( ( XDot * ) ssGetdX ( rtS ) ) ; _rtXdot -> folfyo5vrc = 0.0 ;
 _rtXdot -> folfyo5vrc += rtP . TFwhentau04min_A * rtX . folfyo5vrc ; _rtXdot
--> folfyo5vrc += rtB . lsz3uen22l ; _rtXdot -> c0xqkfbiom = 0.0 ; _rtXdot ->
+-> folfyo5vrc += rtB . dgrpt01040 ; _rtXdot -> c0xqkfbiom = 0.0 ; _rtXdot ->
 c0xqkfbiom += rtP . TFwhentau1min_A * rtX . c0xqkfbiom ; _rtXdot ->
-c0xqkfbiom += rtB . lsz3uen22l ; _rtXdot -> i0so0rvfsc = 0.0 ; _rtXdot ->
+c0xqkfbiom += rtB . dgrpt01040 ; _rtXdot -> i0so0rvfsc = 0.0 ; _rtXdot ->
 i0so0rvfsc += rtP . TFwhentau3min_A * rtX . i0so0rvfsc ; _rtXdot ->
-i0so0rvfsc += rtB . lsz3uen22l ; } void MdlProjection ( void ) { } void
-MdlTerminate ( void ) { { if ( rtDW . ovxpqunp15 . AQHandles ) {
-sdiTerminateStreaming ( & rtDW . ovxpqunp15 . AQHandles ) ; } } { if ( rtDW .
+i0so0rvfsc += rtB . dgrpt01040 ; } void MdlProjection ( void ) { } void
+MdlTerminate ( void ) { { if ( rtDW . eifc5ijtmv . AQHandles ) {
+sdiTerminateStreaming ( & rtDW . eifc5ijtmv . AQHandles ) ; } } { if ( rtDW .
 lornky1dlc . AQHandles ) { sdiTerminateStreaming ( & rtDW . lornky1dlc .
 AQHandles ) ; } } { if ( rtDW . lzd3oqczul . AQHandles ) {
 sdiTerminateStreaming ( & rtDW . lzd3oqczul . AQHandles ) ; } } { if ( rtDW .
@@ -267,9 +267,9 @@ ssSetNumBlockIO ( rtS , 4 ) ; ssSetNumBlockParams ( rtS , 10 ) ; } void
 MdlInitializeSampleTimes ( void ) { ssSetSampleTime ( rtS , 0 , 0.0 ) ;
 ssSetSampleTime ( rtS , 1 , 0.0 ) ; ssSetOffsetTime ( rtS , 0 , 0.0 ) ;
 ssSetOffsetTime ( rtS , 1 , 1.0 ) ; } void raccel_set_checksum ( ) {
-ssSetChecksumVal ( rtS , 0 , 1812776681U ) ; ssSetChecksumVal ( rtS , 1 ,
-3058981147U ) ; ssSetChecksumVal ( rtS , 2 , 3822591189U ) ; ssSetChecksumVal
-( rtS , 3 , 2523459939U ) ; }
+ssSetChecksumVal ( rtS , 0 , 2724720971U ) ; ssSetChecksumVal ( rtS , 1 ,
+1380425682U ) ; ssSetChecksumVal ( rtS , 2 , 3633746294U ) ; ssSetChecksumVal
+( rtS , 3 , 2249175974U ) ; }
 #if defined(_MSC_VER)
 #pragma optimize( "", off )
 #endif
@@ -387,9 +387,9 @@ ssSetSolverShapePreserveControl ( rtS , 2 ) ; ssSetTNextTid ( rtS , INT_MIN )
 ; ssSetTNext ( rtS , rtMinusInf ) ; ssSetSolverNeedsReset ( rtS ) ;
 ssSetNumNonsampledZCs ( rtS , 0 ) ; ssSetContStateDisabled ( rtS ,
 contStatesDisabled ) ; ssSetSolverMaxConsecutiveMinStep ( rtS , 1 ) ; }
-ssSetChecksumVal ( rtS , 0 , 1812776681U ) ; ssSetChecksumVal ( rtS , 1 ,
-3058981147U ) ; ssSetChecksumVal ( rtS , 2 , 3822591189U ) ; ssSetChecksumVal
-( rtS , 3 , 2523459939U ) ; { static const sysRanDType rtAlwaysEnabled =
+ssSetChecksumVal ( rtS , 0 , 2724720971U ) ; ssSetChecksumVal ( rtS , 1 ,
+1380425682U ) ; ssSetChecksumVal ( rtS , 2 , 3633746294U ) ; ssSetChecksumVal
+( rtS , 3 , 2249175974U ) ; { static const sysRanDType rtAlwaysEnabled =
 SUBSYS_RAN_BC_ENABLE ; static RTWExtModeInfo rt_ExtModeInfo ; static const
 sysRanDType * systemRan [ 1 ] ; gblRTWExtModeInfo = & rt_ExtModeInfo ;
 ssSetRTWExtModeInfo ( rtS , & rt_ExtModeInfo ) ;

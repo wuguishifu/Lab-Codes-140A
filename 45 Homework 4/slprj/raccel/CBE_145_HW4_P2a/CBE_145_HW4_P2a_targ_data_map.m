@@ -55,19 +55,19 @@
                     section.data(6).logicalSrcIdx = 5;
                     section.data(6).dtTransOffset = 5;
 
-                    ;% rtP.A1kWf5s1_Amp
+                    ;% rtP.A1kWf5sec1_Amp
                     section.data(7).logicalSrcIdx = 6;
                     section.data(7).dtTransOffset = 6;
 
-                    ;% rtP.A1kWf5s1_Bias
+                    ;% rtP.A1kWf5sec1_Bias
                     section.data(8).logicalSrcIdx = 7;
                     section.data(8).dtTransOffset = 7;
 
-                    ;% rtP.A1kWf5s1_Freq
+                    ;% rtP.A1kWf5sec1_Freq
                     section.data(9).logicalSrcIdx = 8;
                     section.data(9).dtTransOffset = 8;
 
-                    ;% rtP.A1kWf5s1_Phase
+                    ;% rtP.A1kWf5sec1_Phase
                     section.data(10).logicalSrcIdx = 9;
                     section.data(10).dtTransOffset = 9;
 
@@ -131,7 +131,7 @@
                     section.data(3).logicalSrcIdx = 2;
                     section.data(3).dtTransOffset = 2;
 
-                    ;% rtB.lsz3uen22l
+                    ;% rtB.dgrpt01040
                     section.data(4).logicalSrcIdx = 3;
                     section.data(4).dtTransOffset = 3;
 
@@ -187,21 +187,21 @@
                     section.data(1).logicalSrcIdx = 0;
                     section.data(1).dtTransOffset = 0;
 
-                    ;% rtDW.ovxpqunp15.AQHandles
+                    ;% rtDW.eifc5ijtmv.AQHandles
                     section.data(2).logicalSrcIdx = 1;
-                    section.data(2).dtTransOffset = 4;
+                    section.data(2).dtTransOffset = 3;
 
                     ;% rtDW.lornky1dlc.AQHandles
                     section.data(3).logicalSrcIdx = 2;
-                    section.data(3).dtTransOffset = 5;
+                    section.data(3).dtTransOffset = 4;
 
                     ;% rtDW.lzd3oqczul.AQHandles
                     section.data(4).logicalSrcIdx = 3;
-                    section.data(4).dtTransOffset = 6;
+                    section.data(4).dtTransOffset = 5;
 
                     ;% rtDW.fdree3snwc.AQHandles
                     section.data(5).logicalSrcIdx = 4;
-                    section.data(5).dtTransOffset = 7;
+                    section.data(5).dtTransOffset = 6;
 
             nTotData = nTotData + section.nData;
             dworkMap.sections(1) = section;
@@ -233,8 +233,8 @@
     ;%
 
 
-    targMap.checksum0 = 1812776681;
-    targMap.checksum1 = 3058981147;
-    targMap.checksum2 = 3822591189;
-    targMap.checksum3 = 2523459939;
+    targMap.checksum0 = 2724720971;
+    targMap.checksum1 = 1380425682;
+    targMap.checksum2 = 3633746294;
+    targMap.checksum3 = 2249175974;
 

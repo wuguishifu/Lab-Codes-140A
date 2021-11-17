@@ -20,20 +20,20 @@
 #endif
 #endif
 static const rtwCAPI_Signals rtBlockSignals [ ] = { { 0 , 0 , TARGET_STRING (
-"CBE_145_HW4_P2a/A = 1 kW, f = 5 s^-1" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 ,
-0 , 0 } , { 1 , 0 , TARGET_STRING ( "CBE_145_HW4_P2a/TF when tau = 0.4 min" )
-, TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 } , { 2 , 0 , TARGET_STRING (
+"CBE_145_HW4_P2a/A = 1 kW, f = 5 sec^-1" ) , TARGET_STRING ( "" ) , 0 , 0 , 0
+, 0 , 0 } , { 1 , 0 , TARGET_STRING ( "CBE_145_HW4_P2a/TF when tau = 0.4 min"
+) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 } , { 2 , 0 , TARGET_STRING (
 "CBE_145_HW4_P2a/TF when tau = 1 min" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 ,
 0 , 0 } , { 3 , 0 , TARGET_STRING ( "CBE_145_HW4_P2a/TF when tau = 3 min" ) ,
 TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 } , { 0 , 0 , ( NULL ) , ( NULL ) ,
 0 , 0 , 0 , 0 , 0 } } ; static const rtwCAPI_BlockParameters
 rtBlockParameters [ ] = { { 4 , TARGET_STRING (
-"CBE_145_HW4_P2a/A = 1 kW, f = 5 s^-1" ) , TARGET_STRING ( "Amplitude" ) , 0
-, 0 , 0 } , { 5 , TARGET_STRING ( "CBE_145_HW4_P2a/A = 1 kW, f = 5 s^-1" ) ,
-TARGET_STRING ( "Bias" ) , 0 , 0 , 0 } , { 6 , TARGET_STRING (
-"CBE_145_HW4_P2a/A = 1 kW, f = 5 s^-1" ) , TARGET_STRING ( "Frequency" ) , 0
-, 0 , 0 } , { 7 , TARGET_STRING ( "CBE_145_HW4_P2a/A = 1 kW, f = 5 s^-1" ) ,
-TARGET_STRING ( "Phase" ) , 0 , 0 , 0 } , { 8 , TARGET_STRING (
+"CBE_145_HW4_P2a/A = 1 kW, f = 5 sec^-1" ) , TARGET_STRING ( "Amplitude" ) ,
+0 , 0 , 0 } , { 5 , TARGET_STRING ( "CBE_145_HW4_P2a/A = 1 kW, f = 5 sec^-1"
+) , TARGET_STRING ( "Bias" ) , 0 , 0 , 0 } , { 6 , TARGET_STRING (
+"CBE_145_HW4_P2a/A = 1 kW, f = 5 sec^-1" ) , TARGET_STRING ( "Frequency" ) ,
+0 , 0 , 0 } , { 7 , TARGET_STRING ( "CBE_145_HW4_P2a/A = 1 kW, f = 5 sec^-1"
+) , TARGET_STRING ( "Phase" ) , 0 , 0 , 0 } , { 8 , TARGET_STRING (
 "CBE_145_HW4_P2a/TF when tau = 0.4 min" ) , TARGET_STRING ( "A" ) , 0 , 0 , 0
 } , { 9 , TARGET_STRING ( "CBE_145_HW4_P2a/TF when tau = 0.4 min" ) ,
 TARGET_STRING ( "C" ) , 0 , 0 , 0 } , { 10 , TARGET_STRING (
@@ -50,12 +50,12 @@ rtwCAPI_Signals rtRootInputs [ ] = { { 0 , 0 , ( NULL ) , ( NULL ) , 0 , 0 ,
 rtwCAPI_ModelParameters rtModelParameters [ ] = { { 0 , ( NULL ) , 0 , 0 , 0
 } } ;
 #ifndef HOST_CAPI_BUILD
-static void * rtDataAddrMap [ ] = { & rtB . lsz3uen22l , & rtB . fn0unh2ha3 ,
-& rtB . i3f0e0wt1y , & rtB . no4iv1d1om , & rtP . A1kWf5s1_Amp , & rtP .
-A1kWf5s1_Bias , & rtP . A1kWf5s1_Freq , & rtP . A1kWf5s1_Phase , & rtP .
-TFwhentau04min_A , & rtP . TFwhentau04min_C , & rtP . TFwhentau1min_A , & rtP
-. TFwhentau1min_C , & rtP . TFwhentau3min_A , & rtP . TFwhentau3min_C , } ;
-static int32_T * rtVarDimsAddrMap [ ] = { ( NULL ) } ;
+static void * rtDataAddrMap [ ] = { & rtB . dgrpt01040 , & rtB . fn0unh2ha3 ,
+& rtB . i3f0e0wt1y , & rtB . no4iv1d1om , & rtP . A1kWf5sec1_Amp , & rtP .
+A1kWf5sec1_Bias , & rtP . A1kWf5sec1_Freq , & rtP . A1kWf5sec1_Phase , & rtP
+. TFwhentau04min_A , & rtP . TFwhentau04min_C , & rtP . TFwhentau1min_A , &
+rtP . TFwhentau1min_C , & rtP . TFwhentau3min_A , & rtP . TFwhentau3min_C , }
+; static int32_T * rtVarDimsAddrMap [ ] = { ( NULL ) } ;
 #endif
 static TARGET_CONST rtwCAPI_DataTypeMap rtDataTypeMap [ ] = { { "double" ,
 "real_T" , 0 , 0 , sizeof ( real_T ) , ( uint8_T ) SS_DOUBLE , 0 , 0 , 0 } }
@@ -75,8 +75,8 @@ int8_T ) 0 , ( uint8_T ) 0 } } ; static rtwCAPI_ModelMappingStaticInfo
 mmiStatic = { { rtBlockSignals , 4 , rtRootInputs , 0 , rtRootOutputs , 0 } ,
 { rtBlockParameters , 10 , rtModelParameters , 0 } , { ( NULL ) , 0 } , {
 rtDataTypeMap , rtDimensionMap , rtFixPtMap , rtElementMap , rtSampleTimeMap
-, rtDimensionArray } , "float" , { 1812776681U , 3058981147U , 3822591189U ,
-2523459939U } , ( NULL ) , 0 , ( boolean_T ) 0 , rt_LoggedStateIdxList } ;
+, rtDimensionArray } , "float" , { 2724720971U , 1380425682U , 3633746294U ,
+2249175974U } , ( NULL ) , 0 , ( boolean_T ) 0 , rt_LoggedStateIdxList } ;
 const rtwCAPI_ModelMappingStaticInfo * CBE_145_HW4_P2a_GetCAPIStaticMap (
 void ) { return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD

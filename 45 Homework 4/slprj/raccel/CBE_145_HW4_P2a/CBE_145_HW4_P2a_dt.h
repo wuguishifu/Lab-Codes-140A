@@ -19,7 +19,7 @@ static const char_T * rtDataTypeNames [ ] = { "real_T" , "real32_T" ,
 "timer_uint32_pair_T" , "physical_connection" , "uint64_T" , "int64_T" ,
 "char_T" , "uchar_T" , "time_T" } ; static DataTypeTransition rtBTransitions
 [ ] = { { ( char_T * ) ( & rtB . fn0unh2ha3 ) , 0 , 0 , 4 } , { ( char_T * )
-( & rtDW . i4nd2wja0w . LoggedData [ 0 ] ) , 11 , 0 , 8 } } ; static
+( & rtDW . i4nd2wja0w . LoggedData [ 0 ] ) , 11 , 0 , 7 } } ; static
 DataTypeTransitionTable rtBTransTable = { 2U , rtBTransitions } ; static
 DataTypeTransition rtPTransitions [ ] = { { ( char_T * ) ( & rtP .
 TFwhentau04min_A ) , 0 , 0 , 10 } } ; static DataTypeTransitionTable

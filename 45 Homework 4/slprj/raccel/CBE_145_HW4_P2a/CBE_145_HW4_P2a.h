@@ -47,8 +47,8 @@
 #ifndef IN_RACCEL_MAIN
 #endif
 typedef struct { real_T fn0unh2ha3 ; real_T i3f0e0wt1y ; real_T no4iv1d1om ;
-real_T lsz3uen22l ; } B ; typedef struct { struct { void * LoggedData [ 4 ] ;
-} i4nd2wja0w ; struct { void * AQHandles ; } ovxpqunp15 ; struct { void *
+real_T dgrpt01040 ; } B ; typedef struct { struct { void * LoggedData [ 3 ] ;
+} i4nd2wja0w ; struct { void * AQHandles ; } eifc5ijtmv ; struct { void *
 AQHandles ; } lornky1dlc ; struct { void * AQHandles ; } lzd3oqczul ; struct
 { void * AQHandles ; } fdree3snwc ; } DW ; typedef struct { real_T folfyo5vrc
 ; real_T c0xqkfbiom ; real_T i0so0rvfsc ; } X ; typedef struct { real_T
@@ -61,10 +61,10 @@ c0xqkfbiom ; real_T i0so0rvfsc ; } CXPtMax ; typedef struct {
 rtwCAPI_ModelMappingInfo mmi ; } DataMapInfo ; struct P_ { real_T
 TFwhentau04min_A ; real_T TFwhentau04min_C ; real_T TFwhentau1min_A ; real_T
 TFwhentau1min_C ; real_T TFwhentau3min_A ; real_T TFwhentau3min_C ; real_T
-A1kWf5s1_Amp ; real_T A1kWf5s1_Bias ; real_T A1kWf5s1_Freq ; real_T
-A1kWf5s1_Phase ; } ; extern const char * RT_MEMORY_ALLOCATION_ERROR ; extern
-B rtB ; extern X rtX ; extern DW rtDW ; extern P rtP ; extern mxArray *
-mr_CBE_145_HW4_P2a_GetDWork ( ) ; extern void mr_CBE_145_HW4_P2a_SetDWork (
+A1kWf5sec1_Amp ; real_T A1kWf5sec1_Bias ; real_T A1kWf5sec1_Freq ; real_T
+A1kWf5sec1_Phase ; } ; extern const char * RT_MEMORY_ALLOCATION_ERROR ;
+extern B rtB ; extern X rtX ; extern DW rtDW ; extern P rtP ; extern mxArray
+* mr_CBE_145_HW4_P2a_GetDWork ( ) ; extern void mr_CBE_145_HW4_P2a_SetDWork (
 const mxArray * ssDW ) ; extern mxArray *
 mr_CBE_145_HW4_P2a_GetSimStateDisallowedBlocks ( ) ; extern const
 rtwCAPI_ModelMappingStaticInfo * CBE_145_HW4_P2a_GetCAPIStaticMap ( void ) ;
