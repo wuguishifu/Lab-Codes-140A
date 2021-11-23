@@ -102,4 +102,3 @@ ylabel('k_La')
 plot(250:340, polyval(fitn.constant_flowe.Coefficients, 250:340), '-b')
 plot(250:340, polyval(fitn.constant_flowt.Coefficients, 250:340), '-r')
 legend('Experimental (6 L/min)', 'Theoretical (6 L/min)')
-
